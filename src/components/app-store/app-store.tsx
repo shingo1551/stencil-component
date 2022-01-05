@@ -1,5 +1,5 @@
 import { Component, Host, h } from '@stencil/core';
-import state from '../../shared/store';
+import state from './store';
 
 @Component({
   tag: 'app-store',
@@ -10,27 +10,25 @@ export class AppStore {
   timer: number;
 
   connectedCallback() {
-    console.log('connectedCallback')
+    console.log('connectedCallback');
     this.timer = setInterval(() => state.seconds++, 1000);
   }
 
   disconnectedCallback() {
-    console.log('disconnectedCallback')
+    console.log('disconnectedCallback');
     clearInterval(this.timer);
   }
 
   render() {
     return (
       <Host>
-        <button onClick={() => state.clicks++}>
-          {state.clicks}
-        </button>
+        <button onClick={() => state.clicks++}>{state.clicks}</button>
         <p>
           Seconds: {state.seconds}
           <br />
           Squared Clicks: {state.squaredClicks}
         </p>
-      </Host>);
+      </Host>
+    );
   }
-
 }
