@@ -123,6 +123,7 @@ declare namespace LocalJSX {
     interface CheckTodo {
         "done": boolean;
         "n": number;
+        "onTodo"?: (event: CustomEvent<number>) => void;
         "text": string;
     }
     interface IntrinsicElements {

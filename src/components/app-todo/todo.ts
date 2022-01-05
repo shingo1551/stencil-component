@@ -1,4 +1,4 @@
-import { createStore } from "@stencil/store";
+import { createStore } from '@stencil/store';
 
 export interface ToDo {
   done: boolean;
@@ -46,8 +46,8 @@ export function done(n: number) {
   saveStorage();
 }
 
-export function archive() {
-  state.list = state.list.filter(todo => !todo.done);
+export function purge() {
+  state.list = state.list.filter((todo) => !todo.done);
   saveStorage();
 }
 

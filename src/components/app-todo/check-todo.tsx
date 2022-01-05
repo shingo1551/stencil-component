@@ -1,5 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
-import { done } from '../../shared/todo';
+import { Component, Event, EventEmitter, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'check-todo',
@@ -11,19 +10,20 @@ export class CheckToDo {
   @Prop() text!: string;
   @Prop() n!: number;
 
-  onClick = () => {
-    done(this.n);
-  }
+  @Event() todo: EventEmitter<number>;
 
   render() {
     return (
       <li>
-        <label class="checkbox">
-          <input type="checkbox" checked={this.done} onClick={this.onClick} />
+        <label class='checkbox'>
+          <input
+            type='checkbox'
+            checked={this.done}
+            onClick={() => this.todo.emit(this.n)}
+          />
           <span class={{ done: this.done }}>{this.text}</span>
         </label>
       </li>
     );
   }
-
 }
