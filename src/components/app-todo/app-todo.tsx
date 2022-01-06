@@ -1,5 +1,6 @@
 import { Component, Host, h, State } from '@stencil/core';
 import state, { purge, done, push } from './todo';
+import { loading } from '../../shared/utils';
 
 @Component({
   tag: 'app-todo',
@@ -7,8 +8,8 @@ import state, { purge, done, push } from './todo';
   shadow: true,
 })
 export class AppToDo {
-  @State() disabled = true;
   @State() loading = true;
+  @State() disabled = true;
 
   input: HTMLInputElement;
 
@@ -29,19 +30,15 @@ export class AppToDo {
   };
 
   render() {
-    if (this.loading)
-      setTimeout(() => {
-        this.loading = false;
-      }, 0);
-    else
-      return (
-        <Host>
-          <h2>Todo</h2>
-          <Purge purge={this.onPurge}></Purge>
-          <Ul></Ul>
-          <Form comp={this}></Form>
-        </Host>
-      );
+    return loading(
+      this,
+      <Host>
+        <h2>Todo</h2>
+        <Purge purge={this.onPurge}></Purge>
+        <List></List>
+        <Form comp={this}></Form>
+      </Host>
+    );
   }
 }
 
@@ -55,7 +52,7 @@ const Purge = ({ purge }) => (
   </span>
 );
 
-const Ul = () => (
+const List = () => (
   <ul>
     {state.list.map((todo, n) => (
       <check-todo
