@@ -8,9 +8,14 @@ import ApexCharts, { ApexOptions } from 'apexcharts';
 })
 export class AppChart {
   div: HTMLDivElement;
+  chart: ApexCharts;
 
   componentDidRender() {
     this.chartRender();
+  }
+
+  disconnectedCallback() {
+    this.chart.destroy();
   }
 
   chartRender() {
@@ -29,8 +34,8 @@ export class AppChart {
       },
     };
 
-    var chart = new ApexCharts(this.div, options);
-    chart.render();
+    this.chart = new ApexCharts(this.div, options);
+    this.chart.render();
   }
 
   render() {
