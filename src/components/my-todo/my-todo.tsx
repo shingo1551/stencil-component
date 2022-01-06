@@ -3,8 +3,8 @@ import state, { purge, done, push } from './todo';
 import { loading } from '../../shared/utils';
 
 @Component({
-  tag: 'app-todo',
-  styleUrl: 'app-todo.css',
+  tag: 'my-todo',
+  styleUrl: 'my-todo.css',
   shadow: true,
 })
 export class AppToDo {

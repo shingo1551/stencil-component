@@ -6,151 +6,138 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppChart {
-    }
-    interface AppChild {
-        "p1": string;
-        "p2": string;
-    }
-    interface AppHello {
-    }
-    interface AppHello1 {
-        "name": string;
-    }
-    interface AppLifecycle {
-    }
-    interface AppProfile {
-        "name": string;
-    }
-    interface AppStore {
-    }
-    interface AppTodo {
-    }
     interface CheckTodo {
         "done": boolean;
         "n": number;
         "text": string;
     }
+    interface MyChart {
+    }
+    interface MyHello {
+        "name": string;
+    }
+    interface MyLifecycle {
+    }
+    interface MyName {
+        "first": string;
+        "last": string;
+    }
+    interface MyProfile {
+        "name": string;
+    }
+    interface MyStore {
+    }
+    interface MyTodo {
+    }
 }
 declare global {
-    interface HTMLAppChartElement extends Components.AppChart, HTMLStencilElement {
-    }
-    var HTMLAppChartElement: {
-        prototype: HTMLAppChartElement;
-        new (): HTMLAppChartElement;
-    };
-    interface HTMLAppChildElement extends Components.AppChild, HTMLStencilElement {
-    }
-    var HTMLAppChildElement: {
-        prototype: HTMLAppChildElement;
-        new (): HTMLAppChildElement;
-    };
-    interface HTMLAppHelloElement extends Components.AppHello, HTMLStencilElement {
-    }
-    var HTMLAppHelloElement: {
-        prototype: HTMLAppHelloElement;
-        new (): HTMLAppHelloElement;
-    };
-    interface HTMLAppHello1Element extends Components.AppHello1, HTMLStencilElement {
-    }
-    var HTMLAppHello1Element: {
-        prototype: HTMLAppHello1Element;
-        new (): HTMLAppHello1Element;
-    };
-    interface HTMLAppLifecycleElement extends Components.AppLifecycle, HTMLStencilElement {
-    }
-    var HTMLAppLifecycleElement: {
-        prototype: HTMLAppLifecycleElement;
-        new (): HTMLAppLifecycleElement;
-    };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
-    }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
-    };
-    interface HTMLAppStoreElement extends Components.AppStore, HTMLStencilElement {
-    }
-    var HTMLAppStoreElement: {
-        prototype: HTMLAppStoreElement;
-        new (): HTMLAppStoreElement;
-    };
-    interface HTMLAppTodoElement extends Components.AppTodo, HTMLStencilElement {
-    }
-    var HTMLAppTodoElement: {
-        prototype: HTMLAppTodoElement;
-        new (): HTMLAppTodoElement;
-    };
     interface HTMLCheckTodoElement extends Components.CheckTodo, HTMLStencilElement {
     }
     var HTMLCheckTodoElement: {
         prototype: HTMLCheckTodoElement;
         new (): HTMLCheckTodoElement;
     };
+    interface HTMLMyChartElement extends Components.MyChart, HTMLStencilElement {
+    }
+    var HTMLMyChartElement: {
+        prototype: HTMLMyChartElement;
+        new (): HTMLMyChartElement;
+    };
+    interface HTMLMyHelloElement extends Components.MyHello, HTMLStencilElement {
+    }
+    var HTMLMyHelloElement: {
+        prototype: HTMLMyHelloElement;
+        new (): HTMLMyHelloElement;
+    };
+    interface HTMLMyLifecycleElement extends Components.MyLifecycle, HTMLStencilElement {
+    }
+    var HTMLMyLifecycleElement: {
+        prototype: HTMLMyLifecycleElement;
+        new (): HTMLMyLifecycleElement;
+    };
+    interface HTMLMyNameElement extends Components.MyName, HTMLStencilElement {
+    }
+    var HTMLMyNameElement: {
+        prototype: HTMLMyNameElement;
+        new (): HTMLMyNameElement;
+    };
+    interface HTMLMyProfileElement extends Components.MyProfile, HTMLStencilElement {
+    }
+    var HTMLMyProfileElement: {
+        prototype: HTMLMyProfileElement;
+        new (): HTMLMyProfileElement;
+    };
+    interface HTMLMyStoreElement extends Components.MyStore, HTMLStencilElement {
+    }
+    var HTMLMyStoreElement: {
+        prototype: HTMLMyStoreElement;
+        new (): HTMLMyStoreElement;
+    };
+    interface HTMLMyTodoElement extends Components.MyTodo, HTMLStencilElement {
+    }
+    var HTMLMyTodoElement: {
+        prototype: HTMLMyTodoElement;
+        new (): HTMLMyTodoElement;
+    };
     interface HTMLElementTagNameMap {
-        "app-chart": HTMLAppChartElement;
-        "app-child": HTMLAppChildElement;
-        "app-hello": HTMLAppHelloElement;
-        "app-hello1": HTMLAppHello1Element;
-        "app-lifecycle": HTMLAppLifecycleElement;
-        "app-profile": HTMLAppProfileElement;
-        "app-store": HTMLAppStoreElement;
-        "app-todo": HTMLAppTodoElement;
         "check-todo": HTMLCheckTodoElement;
+        "my-chart": HTMLMyChartElement;
+        "my-hello": HTMLMyHelloElement;
+        "my-lifecycle": HTMLMyLifecycleElement;
+        "my-name": HTMLMyNameElement;
+        "my-profile": HTMLMyProfileElement;
+        "my-store": HTMLMyStoreElement;
+        "my-todo": HTMLMyTodoElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppChart {
-    }
-    interface AppChild {
-        "p1"?: string;
-        "p2"?: string;
-    }
-    interface AppHello {
-    }
-    interface AppHello1 {
-        "name"?: string;
-    }
-    interface AppLifecycle {
-    }
-    interface AppProfile {
-        "name"?: string;
-    }
-    interface AppStore {
-    }
-    interface AppTodo {
-    }
     interface CheckTodo {
         "done": boolean;
         "n": number;
         "onTodo"?: (event: CustomEvent<number>) => void;
         "text": string;
     }
+    interface MyChart {
+    }
+    interface MyHello {
+        "name"?: string;
+    }
+    interface MyLifecycle {
+    }
+    interface MyName {
+        "first"?: string;
+        "last"?: string;
+    }
+    interface MyProfile {
+        "name"?: string;
+    }
+    interface MyStore {
+    }
+    interface MyTodo {
+    }
     interface IntrinsicElements {
-        "app-chart": AppChart;
-        "app-child": AppChild;
-        "app-hello": AppHello;
-        "app-hello1": AppHello1;
-        "app-lifecycle": AppLifecycle;
-        "app-profile": AppProfile;
-        "app-store": AppStore;
-        "app-todo": AppTodo;
         "check-todo": CheckTodo;
+        "my-chart": MyChart;
+        "my-hello": MyHello;
+        "my-lifecycle": MyLifecycle;
+        "my-name": MyName;
+        "my-profile": MyProfile;
+        "my-store": MyStore;
+        "my-todo": MyTodo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-chart": LocalJSX.AppChart & JSXBase.HTMLAttributes<HTMLAppChartElement>;
-            "app-child": LocalJSX.AppChild & JSXBase.HTMLAttributes<HTMLAppChildElement>;
-            "app-hello": LocalJSX.AppHello & JSXBase.HTMLAttributes<HTMLAppHelloElement>;
-            "app-hello1": LocalJSX.AppHello1 & JSXBase.HTMLAttributes<HTMLAppHello1Element>;
-            "app-lifecycle": LocalJSX.AppLifecycle & JSXBase.HTMLAttributes<HTMLAppLifecycleElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
-            "app-store": LocalJSX.AppStore & JSXBase.HTMLAttributes<HTMLAppStoreElement>;
-            "app-todo": LocalJSX.AppTodo & JSXBase.HTMLAttributes<HTMLAppTodoElement>;
             "check-todo": LocalJSX.CheckTodo & JSXBase.HTMLAttributes<HTMLCheckTodoElement>;
+            "my-chart": LocalJSX.MyChart & JSXBase.HTMLAttributes<HTMLMyChartElement>;
+            "my-hello": LocalJSX.MyHello & JSXBase.HTMLAttributes<HTMLMyHelloElement>;
+            "my-lifecycle": LocalJSX.MyLifecycle & JSXBase.HTMLAttributes<HTMLMyLifecycleElement>;
+            "my-name": LocalJSX.MyName & JSXBase.HTMLAttributes<HTMLMyNameElement>;
+            "my-profile": LocalJSX.MyProfile & JSXBase.HTMLAttributes<HTMLMyProfileElement>;
+            "my-store": LocalJSX.MyStore & JSXBase.HTMLAttributes<HTMLMyStoreElement>;
+            "my-todo": LocalJSX.MyTodo & JSXBase.HTMLAttributes<HTMLMyTodoElement>;
         }
     }
 }

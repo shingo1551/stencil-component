@@ -1,8 +1,8 @@
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'app-profile',
-  styleUrl: 'app-profile.css',
+  tag: 'my-profile',
+  styleUrl: 'my-profile.css',
   shadow: true,
 })
 export class AppProfile {

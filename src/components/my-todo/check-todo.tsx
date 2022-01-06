@@ -2,7 +2,7 @@ import { Component, Event, EventEmitter, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'check-todo',
-  styleUrl: 'app-todo.css',
+  styleUrl: 'check-todo.css',
   shadow: true,
 })
 export class CheckToDo {

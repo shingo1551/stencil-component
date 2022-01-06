@@ -12,7 +12,7 @@
 - onClick
 
 ```
-  <app-root></app-root>
+  <my-root></my-root>
 ```
 
 ```
@@ -21,14 +21,14 @@ import { Router } from '../../shared/router';
 
 <Router.Switch>
   <Route path='/'>
-    <app-hello></app-hello>
+    <my-hello></my-hello>
   </Route>
   <Route path='/hello'>
-    <app-hello name='SPA'></app-hello>
+    <my-hello name='SPA'></my-hello>
   </Route>
   <Route
     path={match('/hello/:name')}
-    render={({ name }) => <app-hello name={name}></app-hello>}
+    render={({ name }) => <my-hello name={name}></my-hello>}
   />
 </Router.Switch>
 ```

@@ -2,8 +2,8 @@ import { Component, Host, h } from '@stencil/core';
 import state from './store';
 
 @Component({
-  tag: 'app-store',
-  styleUrl: 'app-store.css',
+  tag: 'my-store',
+  styleUrl: 'my-store.css',
   shadow: true,
 })
 export class AppStore {

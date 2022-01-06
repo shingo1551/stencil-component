@@ -1,8 +1,8 @@
 import { Component, State, h } from '@stencil/core';
 
 @Component({
-  tag: 'app-lifecycle',
-  styleUrl: 'app-lifecycle.css',
+  tag: 'my-lifecycle',
+  styleUrl: 'my-lifecycle.css',
   shadow: true,
 })
 export class AppLifecycle {
