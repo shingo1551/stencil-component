@@ -22,9 +22,6 @@ export namespace Components {
         "first": string;
         "last": string;
     }
-    interface MyProfile {
-        "name": string;
-    }
     interface MyStore {
     }
     interface MyTodo {
@@ -61,12 +58,6 @@ declare global {
         prototype: HTMLMyNameElement;
         new (): HTMLMyNameElement;
     };
-    interface HTMLMyProfileElement extends Components.MyProfile, HTMLStencilElement {
-    }
-    var HTMLMyProfileElement: {
-        prototype: HTMLMyProfileElement;
-        new (): HTMLMyProfileElement;
-    };
     interface HTMLMyStoreElement extends Components.MyStore, HTMLStencilElement {
     }
     var HTMLMyStoreElement: {
@@ -85,7 +76,6 @@ declare global {
         "my-hello": HTMLMyHelloElement;
         "my-lifecycle": HTMLMyLifecycleElement;
         "my-name": HTMLMyNameElement;
-        "my-profile": HTMLMyProfileElement;
         "my-store": HTMLMyStoreElement;
         "my-todo": HTMLMyTodoElement;
     }
@@ -108,9 +98,6 @@ declare namespace LocalJSX {
         "first"?: string;
         "last"?: string;
     }
-    interface MyProfile {
-        "name"?: string;
-    }
     interface MyStore {
     }
     interface MyTodo {
@@ -121,7 +108,6 @@ declare namespace LocalJSX {
         "my-hello": MyHello;
         "my-lifecycle": MyLifecycle;
         "my-name": MyName;
-        "my-profile": MyProfile;
         "my-store": MyStore;
         "my-todo": MyTodo;
     }
@@ -135,7 +121,6 @@ declare module "@stencil/core" {
             "my-hello": LocalJSX.MyHello & JSXBase.HTMLAttributes<HTMLMyHelloElement>;
             "my-lifecycle": LocalJSX.MyLifecycle & JSXBase.HTMLAttributes<HTMLMyLifecycleElement>;
             "my-name": LocalJSX.MyName & JSXBase.HTMLAttributes<HTMLMyNameElement>;
-            "my-profile": LocalJSX.MyProfile & JSXBase.HTMLAttributes<HTMLMyProfileElement>;
             "my-store": LocalJSX.MyStore & JSXBase.HTMLAttributes<HTMLMyStoreElement>;
             "my-todo": LocalJSX.MyTodo & JSXBase.HTMLAttributes<HTMLMyTodoElement>;
         }

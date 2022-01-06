@@ -7,7 +7,7 @@ import autoprefixer from 'autoprefixer';
 
 export const config: Config = {
   autoprefixCss: true,
-  namespace: 'MyComp',
+  namespace: 'mycomp',
   outputTargets: [
     {
       type: 'www',
