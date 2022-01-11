@@ -9,61 +9,55 @@ export class AppLifecycle {
   @State() loading = true;
   @State() count = 0;
 
-  log(name: string) {
-    console.log(name);
-  }
-
   countup = () => {
     this.count++;
     sessionStorage.setItem('count', '' + this.count);
   };
 
   connectedCallback() {
-    this.log('1. connectedCallback');
+    console.log('1. connectedCallback');
     this.count = +sessionStorage.getItem('count');
   }
 
   componentWillLoad() {
-    this.log('2. componentWillLoad');
+    console.log('2. componentWillLoad');
   }
 
   componentWillRender() {
-    this.log('3. componentWillRender');
+    console.log('3. componentWillRender');
   }
 
   componentDidRender() {
-    this.log('4. componentDidRender');
+    console.log('4. componentDidRender');
   }
 
   componentDidLoad() {
-    this.log('5. componentDidLoad');
+    console.log('5. componentDidLoad');
   }
 
   componentWillUpdate() {
-    this.log('6. componentWillUpdate');
+    console.log('6. componentWillUpdate');
   }
 
   componentDidUpdate() {
-    this.log('7. componentDidUpdate');
+    console.log('7. componentDidUpdate');
   }
 
   disconnectedCallback() {
-    this.log('8. disconnectedCallback');
+    console.log('8. disconnectedCallback');
   }
 
   render() {
-    this.log('render');
-    if (this.loading)
-      setTimeout(() => {
-        this.loading = false;
-      }, 0);
-    else
-      return (
-        <div>
-          <h1>Lifecycle</h1>
-          <button onClick={this.countup}>Counter</button>
-          <h2>{this.count}</h2>
-        </div>
-      );
+    console.log('render');
+
+    return this.loading ? (
+      setTimeout(() => (this.loading = false), 0)
+    ) : (
+      <div>
+        <h1>Lifecycle</h1>
+        <button onClick={this.countup}>Counter</button>
+        <h2>{this.count}</h2>
+      </div>
+    );
   }
 }

@@ -1,7 +1,2 @@
-export function loading(comp: { loading: boolean }, h: any) {
-  if (comp.loading)
-    setTimeout(() => {
-      comp.loading = false;
-    }, 0);
-  else return h;
-}
+export const loading = (comp: { loading: boolean }, h: any) =>
+  comp.loading ? setTimeout(() => (comp.loading = false), 0) : h;
