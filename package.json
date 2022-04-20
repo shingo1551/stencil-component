@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "scripts": {
-    "build": "rm -rf components dist hydrate loader www && stencil build",
+    "build": "rm -rf components dist docs hydrate loader www && stencil build --docs && mv www/stencil-component docs",
     "start": "stencil build --dev --watch --serve",
     "generate": "stencil generate"
   },

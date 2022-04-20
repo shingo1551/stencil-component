@@ -1,0 +1,1 @@
+System.register(["./p-63fd99b4.system.js"],(function(t){"use strict";var e,n;return{setters:[function(t){e=t.r;n=t.h}],execute:function(){var r="";var s=t("my_hello",function(){function t(t){e(this,t);this.name="Stencil"}t.prototype.render=function(){return n("h1",null,"Hello ",this.name,"!")};return t}());s.style=r}}}));

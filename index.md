@@ -1,14 +1,17 @@
 # SPA by Stencil
 
-## Hello Stencil
-- git clone github/shingo1551/stencil-hello
+## Web Components Stencil
+
+- git clone github/shingo1551/stencil-component
 - npm install
 - npm start
 
 ## Prop
+
 - name
 
 ## Route
+
 - onClick
 
 ```
@@ -34,12 +37,14 @@ import { Router } from '../../shared/router';
 ```
 
 ## build, serve, reload
+
 ```
 npm i -g serve
 serve -s www
 ```
 
 ## Life Cycle
+
 - State()
 - Lifecycle Method
 - settimeout0, loading
