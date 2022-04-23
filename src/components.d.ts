@@ -13,6 +13,15 @@ export namespace Components {
     }
     interface MyChart {
     }
+    interface MyDraganddrop {
+        "containerTitle": string;
+        "group": string;
+    }
+    interface MyDraganddropItem {
+        "assigneeAvatar": string;
+        "dueDate": string;
+        "taskTitle": string;
+    }
     interface MyHello {
         "name": string;
     }
@@ -39,6 +48,18 @@ declare global {
     var HTMLMyChartElement: {
         prototype: HTMLMyChartElement;
         new (): HTMLMyChartElement;
+    };
+    interface HTMLMyDraganddropElement extends Components.MyDraganddrop, HTMLStencilElement {
+    }
+    var HTMLMyDraganddropElement: {
+        prototype: HTMLMyDraganddropElement;
+        new (): HTMLMyDraganddropElement;
+    };
+    interface HTMLMyDraganddropItemElement extends Components.MyDraganddropItem, HTMLStencilElement {
+    }
+    var HTMLMyDraganddropItemElement: {
+        prototype: HTMLMyDraganddropItemElement;
+        new (): HTMLMyDraganddropItemElement;
     };
     interface HTMLMyHelloElement extends Components.MyHello, HTMLStencilElement {
     }
@@ -73,6 +94,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "check-todo": HTMLCheckTodoElement;
         "my-chart": HTMLMyChartElement;
+        "my-draganddrop": HTMLMyDraganddropElement;
+        "my-draganddrop-item": HTMLMyDraganddropItemElement;
         "my-hello": HTMLMyHelloElement;
         "my-lifecycle": HTMLMyLifecycleElement;
         "my-name": HTMLMyNameElement;
@@ -88,6 +111,15 @@ declare namespace LocalJSX {
         "text": string;
     }
     interface MyChart {
+    }
+    interface MyDraganddrop {
+        "containerTitle"?: string;
+        "group"?: string;
+    }
+    interface MyDraganddropItem {
+        "assigneeAvatar"?: string;
+        "dueDate"?: string;
+        "taskTitle"?: string;
     }
     interface MyHello {
         "name"?: string;
@@ -105,6 +137,8 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "check-todo": CheckTodo;
         "my-chart": MyChart;
+        "my-draganddrop": MyDraganddrop;
+        "my-draganddrop-item": MyDraganddropItem;
         "my-hello": MyHello;
         "my-lifecycle": MyLifecycle;
         "my-name": MyName;
@@ -118,6 +152,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "check-todo": LocalJSX.CheckTodo & JSXBase.HTMLAttributes<HTMLCheckTodoElement>;
             "my-chart": LocalJSX.MyChart & JSXBase.HTMLAttributes<HTMLMyChartElement>;
+            "my-draganddrop": LocalJSX.MyDraganddrop & JSXBase.HTMLAttributes<HTMLMyDraganddropElement>;
+            "my-draganddrop-item": LocalJSX.MyDraganddropItem & JSXBase.HTMLAttributes<HTMLMyDraganddropItemElement>;
             "my-hello": LocalJSX.MyHello & JSXBase.HTMLAttributes<HTMLMyHelloElement>;
             "my-lifecycle": LocalJSX.MyLifecycle & JSXBase.HTMLAttributes<HTMLMyLifecycleElement>;
             "my-name": LocalJSX.MyName & JSXBase.HTMLAttributes<HTMLMyNameElement>;
