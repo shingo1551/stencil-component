@@ -1,1 +1,0 @@
-import{r,h as s}from"./p-966be27e.js";const t=class{constructor(s){r(this,s)}render(){return s("h3",null,this.last,", ",this.first)}};t.style="";export{t as my_name}

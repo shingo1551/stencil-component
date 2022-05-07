@@ -6,13 +6,11 @@ import autoprefixer from 'autoprefixer';
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  autoprefixCss: true,
   namespace: 'mycomp',
   outputTargets: [
     {
       type: 'www',
       serviceWorker: null,
-      baseUrl: '/stencil-component/',
     },
     {
       type: 'dist',

@@ -4,7 +4,8 @@ import ApexCharts, { ApexOptions } from 'apexcharts';
 @Component({
   tag: 'my-chart',
   styleUrl: 'my-chart.css',
-  shadow: true,
+  // shadow: true,
+  scoped: true,
 })
 export class AppChart {
   div: HTMLDivElement;
