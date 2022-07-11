@@ -6,8 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyChart {
-    }
     interface MyCheckTodo {
         "done": boolean;
         "n": number;
@@ -22,10 +20,6 @@ export namespace Components {
         "first": string;
         "last": string;
     }
-    interface MySimpleList {
-        "group": string;
-        "titleText": string;
-    }
     interface MyStore {
     }
     interface MyTodo {
@@ -36,12 +30,6 @@ export interface MyCheckTodoCustomEvent<T> extends CustomEvent<T> {
     target: HTMLMyCheckTodoElement;
 }
 declare global {
-    interface HTMLMyChartElement extends Components.MyChart, HTMLStencilElement {
-    }
-    var HTMLMyChartElement: {
-        prototype: HTMLMyChartElement;
-        new (): HTMLMyChartElement;
-    };
     interface HTMLMyCheckTodoElement extends Components.MyCheckTodo, HTMLStencilElement {
     }
     var HTMLMyCheckTodoElement: {
@@ -66,12 +54,6 @@ declare global {
         prototype: HTMLMyNameElement;
         new (): HTMLMyNameElement;
     };
-    interface HTMLMySimpleListElement extends Components.MySimpleList, HTMLStencilElement {
-    }
-    var HTMLMySimpleListElement: {
-        prototype: HTMLMySimpleListElement;
-        new (): HTMLMySimpleListElement;
-    };
     interface HTMLMyStoreElement extends Components.MyStore, HTMLStencilElement {
     }
     var HTMLMyStoreElement: {
@@ -85,19 +67,15 @@ declare global {
         new (): HTMLMyTodoElement;
     };
     interface HTMLElementTagNameMap {
-        "my-chart": HTMLMyChartElement;
         "my-check-todo": HTMLMyCheckTodoElement;
         "my-hello": HTMLMyHelloElement;
         "my-lifecycle": HTMLMyLifecycleElement;
         "my-name": HTMLMyNameElement;
-        "my-simple-list": HTMLMySimpleListElement;
         "my-store": HTMLMyStoreElement;
         "my-todo": HTMLMyTodoElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyChart {
-    }
     interface MyCheckTodo {
         "done": boolean;
         "n": number;
@@ -113,21 +91,15 @@ declare namespace LocalJSX {
         "first"?: string;
         "last"?: string;
     }
-    interface MySimpleList {
-        "group"?: string;
-        "titleText"?: string;
-    }
     interface MyStore {
     }
     interface MyTodo {
     }
     interface IntrinsicElements {
-        "my-chart": MyChart;
         "my-check-todo": MyCheckTodo;
         "my-hello": MyHello;
         "my-lifecycle": MyLifecycle;
         "my-name": MyName;
-        "my-simple-list": MySimpleList;
         "my-store": MyStore;
         "my-todo": MyTodo;
     }
@@ -136,12 +108,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-chart": LocalJSX.MyChart & JSXBase.HTMLAttributes<HTMLMyChartElement>;
             "my-check-todo": LocalJSX.MyCheckTodo & JSXBase.HTMLAttributes<HTMLMyCheckTodoElement>;
             "my-hello": LocalJSX.MyHello & JSXBase.HTMLAttributes<HTMLMyHelloElement>;
             "my-lifecycle": LocalJSX.MyLifecycle & JSXBase.HTMLAttributes<HTMLMyLifecycleElement>;
             "my-name": LocalJSX.MyName & JSXBase.HTMLAttributes<HTMLMyNameElement>;
-            "my-simple-list": LocalJSX.MySimpleList & JSXBase.HTMLAttributes<HTMLMySimpleListElement>;
             "my-store": LocalJSX.MyStore & JSXBase.HTMLAttributes<HTMLMyStoreElement>;
             "my-todo": LocalJSX.MyTodo & JSXBase.HTMLAttributes<HTMLMyTodoElement>;
         }

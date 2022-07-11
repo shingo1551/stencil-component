@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "scripts": {
-    "build": "npm run clean; stencil build --docs && mv www/stencil-component docs",
-    "clean": "rm -rf components dist docs hydrate loader www",
+    "build": "npm run clean; stencil build --docs",
+    "clean": "rm -rf components dist hydrate loader www",
     "start": "stencil build --dev --watch --serve",
     "generate": "stencil generate"
   },
@@ -17,10 +17,6 @@
     "tailwindcss": "^3.1.5"
   },
   "license": "MIT",
-  "dependencies": {
-    "apexcharts": "^3.35.0",
-    "sortablejs": "^1.15.0"
-  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "collection": "dist/collection/collection-manifest.json",
