@@ -5,7 +5,7 @@ import { Component, State, h } from '@stencil/core';
   styleUrl: 'my-lifecycle.css',
   shadow: true,
 })
-export class AppLifecycle {
+export class MyLifecycle {
   @State() loading = true;
   @State() count = 0;
 

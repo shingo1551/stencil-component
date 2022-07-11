@@ -6,12 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface CheckTodo {
+    interface MyChart {
+    }
+    interface MyCheckTodo {
         "done": boolean;
         "n": number;
         "text": string;
-    }
-    interface MyChart {
     }
     interface MyHello {
         "name": string;
@@ -31,22 +31,22 @@ export namespace Components {
     interface MyTodo {
     }
 }
-export interface CheckTodoCustomEvent<T> extends CustomEvent<T> {
+export interface MyCheckTodoCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLCheckTodoElement;
+    target: HTMLMyCheckTodoElement;
 }
 declare global {
-    interface HTMLCheckTodoElement extends Components.CheckTodo, HTMLStencilElement {
-    }
-    var HTMLCheckTodoElement: {
-        prototype: HTMLCheckTodoElement;
-        new (): HTMLCheckTodoElement;
-    };
     interface HTMLMyChartElement extends Components.MyChart, HTMLStencilElement {
     }
     var HTMLMyChartElement: {
         prototype: HTMLMyChartElement;
         new (): HTMLMyChartElement;
+    };
+    interface HTMLMyCheckTodoElement extends Components.MyCheckTodo, HTMLStencilElement {
+    }
+    var HTMLMyCheckTodoElement: {
+        prototype: HTMLMyCheckTodoElement;
+        new (): HTMLMyCheckTodoElement;
     };
     interface HTMLMyHelloElement extends Components.MyHello, HTMLStencilElement {
     }
@@ -85,8 +85,8 @@ declare global {
         new (): HTMLMyTodoElement;
     };
     interface HTMLElementTagNameMap {
-        "check-todo": HTMLCheckTodoElement;
         "my-chart": HTMLMyChartElement;
+        "my-check-todo": HTMLMyCheckTodoElement;
         "my-hello": HTMLMyHelloElement;
         "my-lifecycle": HTMLMyLifecycleElement;
         "my-name": HTMLMyNameElement;
@@ -96,13 +96,13 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface CheckTodo {
+    interface MyChart {
+    }
+    interface MyCheckTodo {
         "done": boolean;
         "n": number;
-        "onTodo"?: (event: CheckTodoCustomEvent<number>) => void;
+        "onTodo"?: (event: MyCheckTodoCustomEvent<number>) => void;
         "text": string;
-    }
-    interface MyChart {
     }
     interface MyHello {
         "name"?: string;
@@ -122,8 +122,8 @@ declare namespace LocalJSX {
     interface MyTodo {
     }
     interface IntrinsicElements {
-        "check-todo": CheckTodo;
         "my-chart": MyChart;
+        "my-check-todo": MyCheckTodo;
         "my-hello": MyHello;
         "my-lifecycle": MyLifecycle;
         "my-name": MyName;
@@ -136,8 +136,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "check-todo": LocalJSX.CheckTodo & JSXBase.HTMLAttributes<HTMLCheckTodoElement>;
             "my-chart": LocalJSX.MyChart & JSXBase.HTMLAttributes<HTMLMyChartElement>;
+            "my-check-todo": LocalJSX.MyCheckTodo & JSXBase.HTMLAttributes<HTMLMyCheckTodoElement>;
             "my-hello": LocalJSX.MyHello & JSXBase.HTMLAttributes<HTMLMyHelloElement>;
             "my-lifecycle": LocalJSX.MyLifecycle & JSXBase.HTMLAttributes<HTMLMyLifecycleElement>;
             "my-name": LocalJSX.MyName & JSXBase.HTMLAttributes<HTMLMyNameElement>;

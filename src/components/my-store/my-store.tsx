@@ -6,7 +6,7 @@ import state from './store';
   styleUrl: 'my-store.css',
   shadow: true,
 })
-export class AppStore {
+export class MyStore {
   timer: number;
 
   connectedCallback() {

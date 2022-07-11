@@ -6,7 +6,7 @@ import state, { purge, done, push } from './todo';
   styleUrl: 'my-todo.css',
   shadow: true,
 })
-export class AppToDo {
+export class MyToDo {
   @State() loading = true;
   @State() disabled = true;
 
@@ -52,7 +52,7 @@ const Purge = ({ purge }) => (
 const List = () => (
   <ul>
     {state.list.map((todo, n) => (
-      <check-todo
+      <my-check-todo
         done={todo.done}
         text={todo.text}
         n={n}
@@ -62,7 +62,7 @@ const List = () => (
   </ul>
 );
 
-const Form = ({ comp }: { comp: AppToDo }) => (
+const Form = ({ comp }: { comp: MyToDo }) => (
   <form>
     <input
       type='text'

@@ -7,7 +7,7 @@ import ApexCharts, { ApexOptions } from 'apexcharts';
   // shadow: true,
   scoped: true,
 })
-export class AppChart {
+export class MyChart {
   div: HTMLDivElement;
   chart: ApexCharts;
 

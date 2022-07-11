@@ -1,11 +1,11 @@
 import { Component, Event, EventEmitter, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'check-todo',
-  styleUrl: 'check-todo.css',
+  tag: 'my-check-todo',
+  styleUrl: 'my-check-todo.css',
   shadow: true,
 })
-export class CheckToDo {
+export class MyCheckTodo {
   @Prop() done!: boolean;
   @Prop() text!: string;
   @Prop() n!: number;

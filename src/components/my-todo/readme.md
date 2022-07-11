@@ -9,12 +9,12 @@
 
 ### Depends on
 
-- [check-todo](.)
+- [my-check-todo](../my-check-todo)
 
 ### Graph
 ```mermaid
 graph TD;
-  my-todo --> check-todo
+  my-todo --> my-check-todo
   style my-todo fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
