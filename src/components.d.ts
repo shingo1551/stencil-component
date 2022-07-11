@@ -31,6 +31,10 @@ export namespace Components {
     interface MyTodo {
     }
 }
+export interface CheckTodoCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLCheckTodoElement;
+}
 declare global {
     interface HTMLCheckTodoElement extends Components.CheckTodo, HTMLStencilElement {
     }
@@ -95,7 +99,7 @@ declare namespace LocalJSX {
     interface CheckTodo {
         "done": boolean;
         "n": number;
-        "onTodo"?: (event: CustomEvent<number>) => void;
+        "onTodo"?: (event: CheckTodoCustomEvent<number>) => void;
         "text": string;
     }
     interface MyChart {
