@@ -1,6 +1,5 @@
 import { Component, Host, h, State } from '@stencil/core';
 import state, { purge, done, push } from './todo';
-import { loading } from '../../shared/utils';
 
 @Component({
   tag: 'my-todo',
@@ -30,15 +29,14 @@ export class AppToDo {
   };
 
   render() {
-    return loading(
-      this,
+    return (
       <Host>
         <h2>Todo</h2>
         <Purge purge={this.onPurge}></Purge>
         <List></List>
         <Form comp={this}></Form>
       </Host>
-    );
+    )
   }
 }
 
