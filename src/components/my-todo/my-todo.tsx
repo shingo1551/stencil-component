@@ -42,11 +42,10 @@ export class AppToDo {
 
 const Purge = ({ purge }) => (
   <span>
-    {state.count} of {state.list.length} remaining [
-    <a href='' onClick={purge}>
+    {state.count} of {state.list.length} remaining
+    <button onClick={purge}>
       purge
-    </a>
-    ]
+    </button>
   </span>
 );
 
