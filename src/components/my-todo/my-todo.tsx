@@ -71,11 +71,6 @@ const Form = ({ comp }: { comp: MyToDo }) => (
       ref={(el) => (comp.input = el)}
       onKeyUp={comp.onKeyUp}
     />
-    <input
-      type='submit'
-      value='add'
-      onClick={comp.onAdd}
-      disabled={comp.disabled}
-    />
+    <button onClick={comp.onAdd} disabled={comp.disabled}>add</button>
   </form>
 );
