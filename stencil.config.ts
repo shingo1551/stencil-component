@@ -6,7 +6,7 @@ import autoprefixer from 'autoprefixer';
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  namespace: 'mycomp',
+  namespace: 'MyComp',
   outputTargets: [
     {
       type: 'www',
